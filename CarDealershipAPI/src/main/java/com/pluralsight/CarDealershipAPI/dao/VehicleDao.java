@@ -2,17 +2,20 @@ package com.pluralsight.CarDealershipAPI.dao;
 
 import com.pluralsight.CarDealershipAPI.model.Vehicle;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
 
 public interface VehicleDao {
-    public List<Vehicle> findByPriceRange();
-    public List<Vehicle> findByMakeAndModel();
-    public List<Vehicle> findByYearRange();
-    public List<Vehicle> findByColor();
-    public List<Vehicle> findByMileageRange();
-    public List<Vehicle> findByType();
+    public List<Vehicle> findByPriceRange(double minPrice, double maxPrice);
+    public List<Vehicle> findByMakeAndModel(String make, String model);
+    public List<Vehicle> findByYearRange(int minYear, int maxYear);
+    public List<Vehicle> findByColor(String color);
+    public List<Vehicle> findByMileageRange(int minMileage, int maxMileage);
+    public List<Vehicle> findByType(String type);
     public List<Vehicle> getAllVehicles();
-    public List<Vehicle> addVehicle();
-    public List<Vehicle>  removeVehicle();
-    public List<Vehicle>  extractVehicles();
+    boolean updateVehicle(Vehicle vehicle);
+    public void addVehicle(Vehicle v);
+    public boolean removeVehicle(int vin);
+    public List<Vehicle>  extractVehicles(ResultSet rs) throws SQLException;
 }

@@ -11,6 +11,9 @@ public class Vehicle {
     private double price;
     private boolean sold;
 
+    public Vehicle() {
+    }
+
     public Vehicle(int vin, String make, String model, String color, int year, String vehicleType, int mileage, double price, boolean sold) {
         this.vin = vin;
         this.make = make;
@@ -45,5 +48,53 @@ public class Vehicle {
 
     public String getVehicleType() {
         return vehicleType;
+    }
+
+    public int getMileage() {
+        return mileage;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public boolean isSold() {
+        return sold;
+    }
+
+    public void setVin(int vin) {
+        this.vin = vin;
+    }
+
+    public void setMake(String make) {
+        this.make = make;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public void setVehicleType(String vehicleType) {
+        this.vehicleType = vehicleType;
+    }
+
+    public void setMileage(int mileage) {
+        this.mileage = mileage;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public void setSold(boolean sold) {
+        this.sold = sold;
     }
 }
